@@ -32,9 +32,9 @@ class zP:
     def kolicnik(self, prvo, drugo):
         return self.zmnozek(prvo, self.obratno(drugo))
 
-    def potenca_naivno(self, stevilo, eksponent):
+    def potenca(self, stevilo, eksponent):
         if eksponent < 0:
-            return self.obratno(self.potenca_naivno(stevilo, -eksponent))
+            return self.obratno(self.potenca(stevilo, -eksponent))
 
         rezultat = 1
         for i in range(eksponent):
@@ -42,7 +42,7 @@ class zP:
 
         return rezultat
 
-    def potenca(self, stevilo, eksponent):
+    def potenca_rekurzija(self, stevilo, eksponent):
         if eksponent == 0:
             return 1
         if eksponent < 0:
