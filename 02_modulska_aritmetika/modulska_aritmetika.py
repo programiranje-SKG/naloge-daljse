@@ -1,5 +1,4 @@
 
-
 class zP:
     def __init__(self, module):
         """
@@ -56,13 +55,13 @@ class zP:
         """
         pass
 
-
     def stevilo_kvadratnih_korenov(self, stevilo):
         """
         Vrne moč množice (število elementov) modulskih kvadratnih korenov števila 'stevilo', torej število števil b
         iz intervala [0, p-1], za katera je produkt b * b (modulsko množenje) enak številu 'stevilo'.
         """
         pass
+
     def je_potenca(self, osnova, iskani_rezultat):
         """
         Preveri, če je 'iskani_rezultat' potenca števila 'osnova' v množici, ki jo predstavlja trenutni objekt.
