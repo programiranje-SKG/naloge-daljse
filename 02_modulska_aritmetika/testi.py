@@ -1,21 +1,5 @@
-from resitev import *
+from modulska_aritmetika import *
 import unittest
-
-
-class TestRazred(unittest.TestCase):
-    def test_vrni_module(self):
-        for modul in [3, 7, 29]:
-            ans = zP(modul).vrni_modul()
-            correct = modul
-            self.assertEqual(ans, correct, msg=f"Napaka pri Z_{modul}.vrni_modul()\n"
-                                               f"Tvoj odgovor: {ans}, rešitev: {correct}")
-
-    def test_to_string(self):
-        for modul in [3, 7, 29]:
-            ans = str(zP(modul))
-            correct = f"Z_{modul}"
-            self.assertEqual(ans, correct, msg=f"Napaka pri Z_{modul}.__str__()\n"
-                                               f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
 
 class TestVsota(unittest.TestCase):
