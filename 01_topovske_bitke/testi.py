@@ -1,9 +1,11 @@
 from topovske_bitke import *
 import unittest
 
+
 class TestTestnaNaloga(unittest.TestCase):
     def test_1(self):
         self.assertEqual(testna_nalog("argument"), "argument")
+
 
 class TestObvezna(unittest.TestCase):
     def test_se_napadate(self):

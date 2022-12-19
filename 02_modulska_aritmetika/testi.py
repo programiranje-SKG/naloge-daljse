@@ -173,14 +173,20 @@ class TestNasprotno(unittest.TestCase):
         resitev = [0, 2, 1]
         z_3 = zP(modul)
         for i in range(modul):
-            self.assertEqual(z_3.nasprotno(i), resitev[i])
+            ans = z_3.nasprotno(i)
+            correct = resitev[i]
+            self.assertEqual(ans, correct, msg=f"Napaka pri z_3.nasprotno({i})\n"
+                                               f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
     def test_nasprotno_7(self):
         modul = 7
         resitev = [0, 6, 5, 4, 3, 2, 1]
         z_7 = zP(modul)
         for i in range(modul):
-            self.assertEqual(z_7.nasprotno(i), resitev[i])
+            ans = z_7.nasprotno(i)
+            correct = resitev[i]
+            self.assertEqual(ans, correct, msg=f"Napaka pri z_7.nasprotno({i})\n"
+                                               f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
     def test_nasprotno_29(self):
         modul = 29
@@ -188,7 +194,10 @@ class TestNasprotno(unittest.TestCase):
                    2, 1]
         z_29 = zP(modul)
         for i in range(modul):
-            self.assertEqual(z_29.nasprotno(i), resitev[i])
+            ans = z_29.nasprotno(i)
+            correct = resitev[i]
+            self.assertEqual(ans, correct, msg=f"Napaka pri z_29.nasprotno({i})\n"
+                                               f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
 
 class TestRazlika(unittest.TestCase):
@@ -199,10 +208,13 @@ class TestRazlika(unittest.TestCase):
             [1, 0, 2],
             [2, 1, 0]
         ]
-        z_P = zP(modul)
+        z_3 = zP(modul)
         for i in range(modul):
             for j in range(modul):
-                self.assertEqual(z_P.razlika(i, j), resitev[i][j])
+                ans = z_3.razlika(i, j)
+                correct = resitev[i][j]
+                self.assertEqual(ans, correct, msg=f"Napaka pri z_3.razlika({i}, {j})\n"
+                                                   f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
     def test_razlika_7(self):
         modul = 7
@@ -214,10 +226,13 @@ class TestRazlika(unittest.TestCase):
             [4, 3, 2, 1, 0, 6, 5],
             [5, 4, 3, 2, 1, 0, 6],
             [6, 5, 4, 3, 2, 1, 0]]
-        z_P = zP(modul)
+        z_7 = zP(modul)
         for i in range(modul):
             for j in range(modul):
-                self.assertEqual(z_P.razlika(i, j), resitev[i][j])
+                ans = z_7.razlika(i, j)
+                correct = resitev[i][j]
+                self.assertEqual(ans, correct, msg=f"Napaka pri z_7.razlika({i}, {j})\n"
+                                                   f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
     def test_razlika_29(self):
         modul = 29
@@ -251,10 +266,13 @@ class TestRazlika(unittest.TestCase):
             [26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 28, 27],
             [27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 28],
             [28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]]
-        z_P = zP(modul)
+        z_29 = zP(modul)
         for i in range(modul):
             for j in range(modul):
-                self.assertEqual(z_P.razlika(i, j), resitev[i][j])
+                ans = z_29.razlika(i, j)
+                correct = resitev[i][j]
+                self.assertEqual(ans, correct, msg=f"Napaka pri z_29.razlika({i}, {j})\n"
+                                                   f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
 
 class TestObratno(unittest.TestCase):
@@ -262,24 +280,33 @@ class TestObratno(unittest.TestCase):
     def test_obratno_3(self):
         modul = 3
         resitev = [1, 2]
-        z_P = zP(modul)
+        z_3 = zP(modul)
         for i in range(1, modul):
-            self.assertEqual(z_P.obratno(i), resitev[i - 1])
+            ans = z_3.obratno(i)
+            correct = resitev[i - 1]
+            self.assertEqual(ans, correct, msg=f"Napaka pri z_3.obratno({i})\n"
+                                               f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
     def test_obratno_7(self):
         modul = 7
         resitev = [1, 4, 5, 2, 3, 6]
-        z_P = zP(modul)
+        z_7 = zP(modul)
         for i in range(1, modul):
-            self.assertEqual(z_P.obratno(i), resitev[i - 1])
+            ans = z_7.obratno(i)
+            correct = resitev[i - 1]
+            self.assertEqual(ans, correct, msg=f"Napaka pri z_7.obratno({i})\n"
+                                               f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
     def test_obratno_29(self):
         modul = 29
         resitev = [1, 15, 10, 22, 6, 5, 25, 11, 13, 3, 8, 17, 9, 27, 2,
                    20, 12, 21, 26, 16, 18, 4, 24, 23, 7, 19, 14, 28]
-        z_P = zP(modul)
+        z_29 = zP(modul)
         for i in range(1, modul):
-            self.assertEqual(z_P.obratno(i), resitev[i - 1])
+            ans = z_29.obratno(i)
+            correct = resitev[i - 1]
+            self.assertEqual(ans, correct, msg=f"Napaka pri z_29.obratno({i})\n"
+                                               f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
 
 class TestKolicnik(unittest.TestCase):
@@ -290,10 +317,13 @@ class TestKolicnik(unittest.TestCase):
             [1, 2],
             [2, 1]
         ]
-        z_P = zP(modul)
+        z_3 = zP(modul)
         for i in range(modul):
             for j in range(1, modul):
-                self.assertEqual(z_P.kolicnik(i, j), resitev[i][j - 1])
+                ans = z_3.kolicnik(i, j)
+                correct = resitev[i][j - 1]
+                self.assertEqual(ans, correct, msg=f"Napaka pri z_3.kolicnik({i}, {j})\n"
+                                                   f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
     def test_kolicnik_7(self):
         modul = 7
@@ -305,10 +335,13 @@ class TestKolicnik(unittest.TestCase):
             [4, 2, 6, 1, 5, 3],
             [5, 6, 4, 3, 1, 2],
             [6, 3, 2, 5, 4, 1]]
-        z_P = zP(modul)
+        z_7 = zP(modul)
         for i in range(modul):
             for j in range(1, modul):
-                self.assertEqual(z_P.kolicnik(i, j), resitev[i][j - 1])
+                ans = z_7.kolicnik(i, j)
+                correct = resitev[i][j - 1]
+                self.assertEqual(ans, correct, msg=f"Napaka pri z_7.kolicnik({i}, {j})\n"
+                                                   f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
     def test_kolicnik_29(self):
         modul = 29
@@ -342,10 +375,13 @@ class TestKolicnik(unittest.TestCase):
             [26, 13, 28, 21, 11, 14, 12, 25, 19, 20, 5, 7, 2, 6, 23, 27, 22, 24, 9, 10, 4, 17, 15, 18, 8, 1, 16, 3],
             [27, 28, 9, 14, 17, 19, 8, 7, 3, 23, 13, 24, 11, 4, 25, 18, 5, 16, 6, 26, 22, 21, 10, 12, 15, 20, 1, 2],
             [28, 14, 19, 7, 23, 24, 4, 18, 16, 26, 21, 12, 20, 2, 27, 9, 17, 8, 3, 13, 11, 25, 5, 6, 22, 10, 15, 1]]
-        z_P = zP(modul)
+        z_29 = zP(modul)
         for i in range(modul):
             for j in range(1, modul):
-                self.assertEqual(z_P.kolicnik(i, j), resitev[i][j - 1])
+                ans = z_29.kolicnik(i, j)
+                correct = resitev[i][j - 1]
+                self.assertEqual(ans, correct, msg=f"Napaka pri z_29.kolicnik({i}, {j})\n"
+                                                   f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
 
 class TestPotenca(unittest.TestCase):
@@ -425,23 +461,32 @@ class TestSteviloKvadratnihKorenov(unittest.TestCase):
     def test_kvadratni_koreni_3(self):
         modul = 3
         resitev = [1, 2, 0]
-        zp = zP(modul)
+        z_3 = zP(modul)
         for i in range(modul):
-            self.assertEqual(zp.stevilo_kvadratnih_korenov(i), resitev[i])
+            ans = z_3.stevilo_kvadratnih_korenov(i)
+            correct = resitev[i]
+            self.assertEqual(ans, correct, msg=f"Napaka pri z_3.stevilo_kvadratnih_korenov({i})\n"
+                                               f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
     def test_kvadratni_koreni_7(self):
         modul = 7
         resitev = [1, 2, 2, 0, 2, 0, 0]
-        zp = zP(modul)
+        z_7 = zP(modul)
         for i in range(modul):
-            self.assertEqual(zp.stevilo_kvadratnih_korenov(i), resitev[i])
+            ans = z_7.stevilo_kvadratnih_korenov(i)
+            correct = resitev[i]
+            self.assertEqual(ans, correct, msg=f"Napaka pri z_7.stevilo_kvadratnih_korenov({i})\n"
+                                               f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
     def test_kvadratni_koreni_29(self):
         modul = 29
         resitev = [1, 2, 0, 0, 2, 2, 2, 2, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, 2, 2, 2, 2, 0, 0, 2]
-        zp = zP(modul)
+        z_29 = zP(modul)
         for i in range(modul):
-            self.assertEqual(zp.stevilo_kvadratnih_korenov(i), resitev[i])
+            ans = z_29.stevilo_kvadratnih_korenov(i)
+            correct = resitev[i]
+            self.assertEqual(ans, correct, msg=f"Napaka pri z_29.stevilo_kvadratnih_korenov({i})\n"
+                                               f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
 
 class TestJeMultiplikativniGenerator(unittest.TestCase):
@@ -449,23 +494,32 @@ class TestJeMultiplikativniGenerator(unittest.TestCase):
     def test_multiplikativni_generator_3(self):
         modul = 3
         multiplicative_generators = {2}
-        zp = zP(modul)
+        z_3 = zP(modul)
         for i in range(modul):
-            self.assertEqual(zp.je_multiplikativni_generator(i), i in multiplicative_generators)
+            ans = z_3.je_multiplikativni_generator(i)
+            correct = i in multiplicative_generators
+            self.assertEqual(ans, correct, msg=f"Napaka pri z_3.je_multiplikativni_generator({i})\n"
+                                               f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
     def test_multiplikativni_generator_7(self):
         modul = 7
         multiplicative_generators = {3, 5}
-        zp = zP(modul)
+        z_7 = zP(modul)
         for i in range(modul):
-            self.assertEqual(zp.je_multiplikativni_generator(i), i in multiplicative_generators)
+            ans = z_7.je_multiplikativni_generator(i)
+            correct = i in multiplicative_generators
+            self.assertEqual(ans, correct, msg=f"Napaka pri z_7.je_multiplikativni_generator({i})\n"
+                                               f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
     def test_multiplikativni_generator_29(self):
         modul = 29
         multiplicative_generators = {2, 3, 8, 10, 11, 14, 15, 18, 19, 21, 26, 27}
-        zp = zP(modul)
+        z_29 = zP(modul)
         for i in range(modul):
-            self.assertEqual(zp.je_multiplikativni_generator(i), i in multiplicative_generators)
+            ans = z_29.je_multiplikativni_generator(i)
+            correct = i in multiplicative_generators
+            self.assertEqual(ans, correct, msg=f"Napaka pri z_29.je_multiplikativni_generator({i})\n"
+                                               f"Tvoj odgovor: {ans}, rešitev: {correct}")
 
 
 if __name__ == "__main__":
