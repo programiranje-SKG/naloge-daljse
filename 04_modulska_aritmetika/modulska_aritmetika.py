@@ -1,5 +1,5 @@
 
-class zP:
+class Zp:
     def __init__(self, module):
         """
         Izdela objekt, ki predstavlja množico Z_modul.
@@ -79,5 +79,5 @@ class zP:
 
 
 if __name__ == '__main__':
-    z_7 = zP(7)
+    z_7 = Zp(7)
     print(z_7.module)
